@@ -1,0 +1,17 @@
+{
+  "name": "new-app",
+  "version": "1.0.0",
+  "description": "A monolithic application that demonstrates content scraping, AI-powered rewriting, and web visualization.",
+  "main": "mock-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
+  }
+}

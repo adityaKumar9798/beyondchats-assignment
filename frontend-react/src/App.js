@@ -115,7 +115,7 @@ function App() {
                 </div>
               </div>
               <p className="article-excerpt">
-                {article.content.substring(0, 150)}...
+                {(article.content || article.original_content || '').substring(0, 150)}...
               </p>
             </div>
           ))}
@@ -137,10 +137,10 @@ function App() {
               <div className="content-column original">
                 <div className="column-header">
                   <h3>Original Content</h3>
-                  <span className="word-count">{selectedArticle.content.split(' ').length} words</span>
+                  <span className="word-count">{(selectedArticle.content || selectedArticle.original_content || '').split(' ').length} words</span>
                 </div>
                 <div className="content-text">
-                  {selectedArticle.content}
+                  {selectedArticle.content || selectedArticle.original_content}
                 </div>
                 {selectedArticle.source_url && (
                   <div className="source-info">
@@ -180,14 +180,14 @@ function App() {
                   )}
                 </div>
 
-                {selectedArticle.references && selectedArticle.references.length > 0 && (
+                {(selectedArticle.references || selectedArticle.citations) && (selectedArticle.references || selectedArticle.citations).length > 0 && (
                   <div className="references-section">
                     <h4>References & Sources</h4>
                     <div className="references-list">
-                      {selectedArticle.references.map((ref, index) => (
+                      {(selectedArticle.references || selectedArticle.citations).map((ref, index) => (
                         <div key={index} className="reference-item">
                           <div className="reference-title">
-                            <strong>{ref.title}</strong>
+                            <strong>{ref.title || `Source ${index + 1}`}</strong>
                           </div>
                           <div className="reference-url">
                             <a href={ref.url} target="_blank" rel="noopener noreferrer">
