@@ -1,0 +1,22 @@
+{
+  "name": "beyondchats-automation",
+  "version": "1.0.0",
+  "description": "Node.js automation for BeyondChats content processing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.5.0",
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "keywords": ["automation", "scraping", "ai", "content"],
+  "author": "BeyondChats Assignment",
+  "license": "MIT"
+}
