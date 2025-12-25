@@ -2,6 +2,8 @@
 
 A monolithic application that demonstrates content scraping, AI-powered rewriting, and web visualization.
 
+**Author:** Aditya Kumar
+
 ## Architecture
 
 This project consists of three main components:
